@@ -1,5 +1,5 @@
 variable "account_metadata" {
-  descrption = "Names and email addresses of child accounts to be created within the organization"
+  description = "Names and email addresses of child accounts to be created within the organization"
   type       = map(any)
 }
 
