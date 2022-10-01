@@ -1,7 +1,5 @@
 data "aws_caller_identity" "current" {}
 
-data "aws_organizations_organization" "org" {}
-
 
 resource "aws_organizations_organization" "org" {
   aws_service_access_principals = var.aws_service_access_principals
