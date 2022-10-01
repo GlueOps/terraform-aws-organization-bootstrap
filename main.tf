@@ -22,4 +22,8 @@ resource "aws_organizations_account" "sub_account" {
   email             = each.value
   close_on_deletion = true
   role_name         = var.organization_access_role_name
+  depends_on = [
+    aws_organizations_organization.org,
+    module.organization_access_role
+  ]
 }
