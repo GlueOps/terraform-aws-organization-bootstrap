@@ -8,7 +8,7 @@ resource "aws_organizations_organization" "org" {
 }
 
 module "organization_access_role" {
-  source = "git::https://github.com/glueops/terraform-aws-organization-access-role.git?ref=1.0.0"
+  source = "git::https://github.com/glueops/terraform-aws-organization-access-role.git?ref=v2.0.0"
 
   master_account_id = aws_organizations_organization.org.master_account_id
   role_name         = var.organization_access_role_name
